@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Avocarrot Demo App</string>
+    <string name="title_section1">Welcome</string>
+    <string name="title_section2">Activity-Triggered Ads #1</string>
+    <string name="title_section3">Activity-Triggered Ads #2</string>
+    <string name="title_section4">In-Stream Ads #1</string>
+    <string name="title_section5">In-Stream Ads #2</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="cta">Sign Up</string>
+    <string name="action_settings">Settings</string>
+    <string name="welcome_message">This is an open-source app to demonstrate how
+        Avocarrot Native Ads look and how you can integrate them. Use the navigation
+        drawer by swiping from the left edge of the screen to navigate this app.
+    </string>
+
+</resources>
