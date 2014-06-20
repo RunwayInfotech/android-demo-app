@@ -20,7 +20,14 @@
         android:text="Activity-Triggered Ads #1"
         android:id="@+id/title"
         android:layout_below="@+id/section_label"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/avocarrot_gray" />
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/title"
+        android:layout_marginTop="15dp"
+        android:background="@color/avocarrot_gray"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -29,6 +36,13 @@
         android:id="@+id/show_activity_1"
         android:layout_below="@+id/title"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="97dp" />
+        android:layout_marginTop="97dp"
+        android:paddingLeft="30dip"
+        android:paddingRight="30dip"
+        android:paddingTop="20dip"
+        android:paddingBottom="20dip"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/buttonshape"
+        />
 
 </RelativeLayout>

@@ -6,4 +6,6 @@
     android:divider="@android:color/transparent"
     android:dividerHeight="0dp"
     android:background="#d45134"
-    tools:context="com.avocarrot.avocarrotdemoapp.main.NavigationDrawerFragment" />
+    android:padding="6dp"
+    tools:context="com.avocarrot.avocarrotdemoapp.main.NavigationDrawerFragment"
+    android:alpha="0.95" />

@@ -1,6 +1,8 @@
 package com.avocarrot.avocarrotdemoapp.main;
 
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.support.v7.app.ActionBarActivity;
 import android.app.Activity;
@@ -21,8 +23,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
+import android.widget.TextView;
+
+import com.avocarrot.androidsdk.instream.InstreamAdFormat;
 
 /**
  * Fragment used for managing interactions for and presentation of a navigation drawer.
@@ -60,6 +65,8 @@ public class NavigationDrawerFragment extends Fragment {
     private boolean mFromSavedInstanceState;
     private boolean mUserLearnedDrawer;
 
+    public Typeface CUSTOM_FONT;
+
     public NavigationDrawerFragment() {
     }
 
@@ -79,6 +86,9 @@ public class NavigationDrawerFragment extends Fragment {
 
         // Select either the default item (0) or the last selected item.
         selectItem(mCurrentSelectedPosition);
+
+        // Load font
+        CUSTOM_FONT = Typeface.createFromAsset(this.getActivity().getAssets(), "fonts/OpenSansBold.ttf");
     }
 
     @Override
@@ -99,18 +109,76 @@ public class NavigationDrawerFragment extends Fragment {
                 selectItem(position);
             }
         });
+        /*
         mDrawerListView.setAdapter(new ArrayAdapter<String>(
                 getActionBar().getThemedContext(),
-                android.R.layout.simple_list_item_1,
-                android.R.id.text1,
+                R.layout.fragment_navigation_drawer_row,
+                R.id.title,
                 new String[]{
                         getString(R.string.title_section1),
                         getString(R.string.title_section2),
                         getString(R.string.title_section3),
                         getString(R.string.title_section4),
                         getString(R.string.title_section5),
+                        getString(R.string.title_section6),
+                        getString(R.string.title_section7)
                 }));
+                */
+
         mDrawerListView.setItemChecked(mCurrentSelectedPosition, true);
+
+
+
+        class MyAdapter extends BaseAdapter {
+
+            private String[] data = {
+                    getString(R.string.title_section1),
+                    getString(R.string.title_section2),
+                    getString(R.string.title_section3),
+                    getString(R.string.title_section4),
+                    getString(R.string.title_section5),
+                    getString(R.string.title_section6),
+                    getString(R.string.title_section7)
+            };
+            private Context mContext;
+
+            public MyAdapter(Context context) {
+                mContext = context;
+            }
+
+            @Override
+            public int getCount() {
+                return data.length;
+            }
+
+            @Override
+            public Object getItem(int position) {
+                return data[position];
+            }
+
+            @Override
+            public long getItemId(int position) {
+                return position;
+            }
+
+            @Override
+            public View getView(int position, View convertView, ViewGroup parent) {
+
+                LayoutInflater layoutInflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
+                View vi = layoutInflater.inflate(R.layout.fragment_navigation_drawer_row, null);
+                TextView tv = (TextView) vi.findViewById(R.id.title);
+                tv.setText(data[position]);
+                tv.setTypeface(CUSTOM_FONT);
+
+                return vi;
+            }
+
+        }
+
+        mDrawerListView.setAdapter(new MyAdapter(getActionBar().getThemedContext()));
+
+
         return mDrawerListView;
     }
 
