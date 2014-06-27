@@ -29,8 +29,6 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
-
 import com.avocarrot.androidsdk.Avocarrot;
 import com.avocarrot.androidsdk.AvocarrotCustomListener;
 import com.avocarrot.androidsdk.AvocarrotInstreamListener;
@@ -39,7 +37,6 @@ import com.avocarrot.androidsdk.custom.AvocarrotCustom;
 import com.avocarrot.androidsdk.custom.CustomAdItem;
 import com.avocarrot.androidsdk.instream.AvocarrotInstream;
 import com.avocarrot.androidsdk.interstitial.AvocarrotInterstitial;
-
 
 public class MainActivity extends ActionBarActivity
         implements NavigationDrawerFragment.NavigationDrawerCallbacks{
