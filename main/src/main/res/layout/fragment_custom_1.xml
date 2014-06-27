@@ -2,17 +2,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.avocarrot.avocarrotdemoapp.main.MainActivity$PlaceholderFragment">
 
     <TextView
         android:id="@+id/section_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
-
 
     <TextView
         android:layout_width="wrap_content"
@@ -24,6 +20,7 @@
         android:layout_centerHorizontal="true"
         android:textColor="@color/avocarrot_gray" />
     <View
+        android:id="@+id/line_seperator"
         android:layout_width="fill_parent"
         android:layout_height="1dp"
         android:layout_below="@+id/title"
@@ -31,4 +28,45 @@
         android:background="@color/avocarrot_gray"/>
 
 
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line_seperator"
+        android:id="@+id/custom_ad_wrapper"
+        android:background="#d4d4d4">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="An ad impression is registered only when the ad is fully visible"
+            android:id="@+id/description"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:gravity="center"
+            android:layout_marginTop="15dp"
+            android:textSize="16sp"
+            android:layout_centerHorizontal="true"
+            android:textColor="#383e46"/>
+
+    <GridView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/gridViewBlock"
+        android:gravity="center"
+        android:stretchMode="columnWidth"
+        android:layout_centerHorizontal="true"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/description"
+        android:numColumns="2"
+        android:scrollbarStyle="outsideOverlay"
+        android:verticalScrollbarPosition="right"
+        android:scrollbars="vertical"
+        android:verticalSpacing="15dp"
+        android:horizontalSpacing="15dp"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingTop="@dimen/activity_vertical_margin" />
+
+    </RelativeLayout>
 </RelativeLayout>

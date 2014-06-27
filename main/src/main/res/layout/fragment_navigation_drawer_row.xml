@@ -10,8 +10,7 @@
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:layout_marginRight="5dp"
-        android:src="@drawable/list_item"
-        />
+        android:src="@drawable/icon_list" />
 
     <TextView
         android:id="@+id/title"
@@ -23,15 +22,13 @@
         android:textColor="#ffffff"
         android:text="Title Here"
         android:textSize="15sp"
-        android:textStyle="bold"
-        />
+        android:textStyle="bold" />
 
     <View
         android:layout_width="fill_parent"
         android:layout_height="1dp"
         android:layout_below="@+id/icon"
         android:layout_marginTop="15dp"
-        android:background="#ffffff"/>
-
+        android:background="#ffffff" />
 
 </RelativeLayout>
