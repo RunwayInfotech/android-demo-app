@@ -2,4 +2,5 @@
     <resources>
         <color name="avocarrot_orange">#d6502c</color>
         <color name="avocarrot_gray">#868686</color>
+        <color name="avocarrot_green">#badb53</color>
     </resources>

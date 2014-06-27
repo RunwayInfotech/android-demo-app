@@ -20,22 +20,22 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Welcome"
+        android:gravity="center"
         android:id="@+id/title"
         android:textSize="35sp"
         android:textColor="@color/avocarrot_orange"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/textView1"
-        android:paddingTop="10dp"
         />
 
 
     <ImageView
         android:id="@+id/intro"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:layout_width="130dp"
         android:layout_height="130dp"
         android:layout_below="@+id/title"
-        android:src="@drawable/welcome_icon"
+        android:src="@drawable/icon_welcome"
         android:layout_centerInParent="true"
         />
 
@@ -60,12 +60,12 @@
         android:text="@string/welcome_message_2"
         android:id="@+id/textView1"
         android:gravity="fill_horizontal"
-        android:textSize="17sp"
-        android:textColor="#cccdcc"
+        android:textSize="15sp"
+        android:textColor="#bcbcbc"
         android:layout_centerVertical="true"
         android:layout_alignParentTop="true"
         android:paddingLeft="70dp"
-        android:paddingRight="10dp"
+        android:paddingRight="20dp"
         android:paddingTop="10dp"
         android:paddingBottom="30dp"
         android:layout_alignLeft="@+id/arrow"
@@ -79,7 +79,7 @@
         android:layout_height="50dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:src="@drawable/arrow"
+        android:src="@drawable/icon_arrow"
         />
 
 

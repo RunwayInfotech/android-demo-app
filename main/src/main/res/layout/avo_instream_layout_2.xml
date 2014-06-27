@@ -12,8 +12,8 @@
         android:layout_height="80dp"
         android:paddingRight="10dp"
         android:layout_marginRight="10dp"
-        android:contentDescription="Ad Image"
-        />
+        android:contentDescription="Ad Image" />
+
     <TextView
         android:id="@+id/avo_ad_icon"
         android:layout_width="wrap_content"
@@ -24,8 +24,7 @@
         android:text="Sponsored"
         android:textSize="12sp"
         android:gravity="left"
-        android:textColor="#a2a2a2"
-        />
+        android:textColor="#a2a2a2" />
 
     <TextView
         android:id="@+id/avo_native_headline"
@@ -40,8 +39,7 @@
         android:textColor="#5c5c5c"
         android:text="Default headline"
         android:textSize="15sp"
-        android:textStyle="bold" 
-        />
+        android:textStyle="bold" />
 
 	    <Button
 	        android:id="@+id/avo_cta_button"
