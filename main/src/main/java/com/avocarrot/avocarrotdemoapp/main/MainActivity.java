@@ -25,6 +25,7 @@ import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -71,6 +72,7 @@ public class MainActivity extends ActionBarActivity
         //---------------------------------------------------------------------------------------
         Avocarrot.initWithKey(getApplicationContext(), "3dbab458941a2446e2b48ac866b42027f5cac288");
         Avocarrot.setSandbox(true);
+        Avocarrot.setLogger(true,"ALL");
 
         // Load fonts
         FONT_REGULAR = Typeface.createFromAsset(getAssets(), "fonts/OpenSansRegular.ttf");
@@ -90,13 +92,13 @@ public class MainActivity extends ActionBarActivity
 
     public void onSectionAttached(int number) {
         switch (number) {
-            case 1:  mTitle = getString(R.string.title_section1);                break;
-            case 2:  mTitle = getString(R.string.title_section2);  break;
-            case 3:  mTitle = getString(R.string.title_section3);  break;
-            case 4:  mTitle = getString(R.string.title_section4);           break;
-            case 5:  mTitle = getString(R.string.title_section5);           break;
-            case 6:  mTitle = getString(R.string.title_section6);              break;
-            case 7:  mTitle = getString(R.string.title_section7);              break;
+            case 1:  mTitle = getString(R.string.title_section1); break;
+            case 2:  mTitle = getString(R.string.title_section2); break;
+            case 3:  mTitle = getString(R.string.title_section3); break;
+            case 4:  mTitle = getString(R.string.title_section4); break;
+            case 5:  mTitle = getString(R.string.title_section5); break;
+            case 6:  mTitle = getString(R.string.title_section6); break;
+            case 7:  mTitle = getString(R.string.title_section7); break;
         }
     }
 
@@ -221,20 +223,37 @@ public class MainActivity extends ActionBarActivity
                     TextView txtDescription= (TextView)activityFragment1.findViewById(R.id.description);
                     txtDescription.setTypeface(FONT_REGULAR);
 
+                    final ProgressBar loadingBar1 = (ProgressBar) activityFragment1.findViewById(R.id.progressBar);
+                    final TextView loadingLabel1  = (TextView)    activityFragment1.findViewById(R.id.progressBarLabel);
+
+                    final AvocarrotInterstitial myInterstitialAd1 = new AvocarrotInterstitial();
+
                     Button showFirstAdBtn = (Button) activityFragment1.findViewById(R.id.show_activity_1);
                     showFirstAdBtn.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            AvocarrotInterstitial.getInstance().showAd((Activity) v.getContext(), "activity_triggered_1");
+                            myInterstitialAd1.showAd((Activity) v.getContext(), "activity_triggered_1");
                         }
                     });
 
-                    AvocarrotInterstitial.getInstance().loadAdForPlacement("activity_triggered_1");
+                    myInterstitialAd1.loadAdForPlacement("activity_triggered_1");
 
-                    Avocarrot.getInstance().setAdListener(new AvocarrotInterstitialListener() {
-                        @Override public void adDidLoad()                  { Log.d("Avocarrot", "adDidLoad");               }
-                        @Override public void adDidNotLoad(String reason)  { Log.d("Avocarrot", "adDidNotLoad: " + reason); }
-                        @Override public void adDidFailToLoad(Exception e) { Log.e("Avocarrot", "adDidFailToLoad: " + e);   }
+                    myInterstitialAd1.setAdListener(new AvocarrotInterstitialListener() {
+                        @Override public void adDidLoad() {
+                            Log.d("Avocarrot", "adDidLoad");
+                            loadingBar1.setVisibility(View.GONE);
+                            loadingLabel1.setVisibility(View.GONE);
+                        }
+                        @Override public void adDidNotLoad(String reason)  {
+                            loadingBar1.setVisibility(View.GONE);
+                            loadingLabel1.setText("Ad did fail to load");
+                            Log.d("Avocarrot", "adDidNotLoad: " + reason);
+                        }
+                        @Override public void adDidFailToLoad(Exception e) {
+                            Log.e("Avocarrot", "adDidFailToLoad: " + e);
+                            loadingBar1.setVisibility(View.GONE);
+                            loadingLabel1.setText("Ad did fail to load");
+                        }
                         @Override public void adWillAppear()               { Log.d("Avocarrot", "adWillAppear");            }
                         @Override public void adDidAppear()                { Log.d("Avocarrot", "adDidAppear");             }
                         @Override public void adWillDisappear()            { Log.d("Avocarrot", "adWillDisappear");         }
@@ -259,20 +278,37 @@ public class MainActivity extends ActionBarActivity
                     txtDescription= (TextView)activityFragment2.findViewById(R.id.description);
                     txtDescription.setTypeface(FONT_REGULAR);
 
+                    final ProgressBar loadingBar2 = (ProgressBar) activityFragment2.findViewById(R.id.progressBar);
+                    final TextView loadingLabel2  = (TextView)    activityFragment2.findViewById(R.id.progressBarLabel);
+
+                    final AvocarrotInterstitial myInterstitialAd2 = new AvocarrotInterstitial();
+
                     Button showSecondAdBtn = (Button) activityFragment2.findViewById(R.id.show_activity_2);
                     showSecondAdBtn.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            AvocarrotInterstitial.getInstance().showAd((Activity)v.getContext(), "activity_triggered_2");
+                            myInterstitialAd2.showAd((Activity)v.getContext(), "activity_triggered_2");
                         }
                     });
 
-                    AvocarrotInterstitial.getInstance().loadAdForPlacement("activity_triggered_2");
+                    myInterstitialAd2.loadAdForPlacement("activity_triggered_2");
 
-                    Avocarrot.getInstance().setAdListener(new AvocarrotInterstitialListener() {
-                        @Override public void adDidLoad()                  { Log.d("Avocarrot", "adDidLoad");               }
-                        @Override public void adDidNotLoad(String reason)  { Log.d("Avocarrot", "adDidNotLoad: " + reason); }
-                        @Override public void adDidFailToLoad(Exception e) { Log.e("Avocarrot", "adDidFailToLoad: " + e);   }
+                    myInterstitialAd2.setAdListener(new AvocarrotInterstitialListener() {
+                        @Override public void adDidLoad() {
+                            loadingBar2.setVisibility(View.GONE);
+                            loadingLabel2.setVisibility(View.GONE);
+                            Log.d("Avocarrot", "adDidLoad");
+                        }
+                        @Override public void adDidNotLoad(String reason)  {
+                            loadingBar2.setVisibility(View.GONE);
+                            loadingLabel2.setText("Ad did fail to load");
+                            Log.d("Avocarrot", "adDidNotLoad: " + reason);
+                        }
+                        @Override public void adDidFailToLoad(Exception e) {
+                            loadingBar2.setVisibility(View.GONE);
+                            loadingLabel2.setText("Ad did fail to load");
+                            Log.e("Avocarrot", "adDidFailToLoad: " + e);
+                        }
                         @Override public void adWillAppear()               { Log.d("Avocarrot", "adWillAppear");            }
                         @Override public void adDidAppear()                { Log.d("Avocarrot", "adDidAppear");             }
                         @Override public void adWillDisappear()            { Log.d("Avocarrot", "adWillDisappear");         }
@@ -301,19 +337,20 @@ public class MainActivity extends ActionBarActivity
                             R.id.title,
                             vegetables);
 
-                    AvocarrotInstream.getInstance().initialize(vegetableAdapter);
-                    AvocarrotInstream.setFrequency(2, 4);
-                    AvocarrotInstream.setLayout(
+                    AvocarrotInstream myInStreamAd1 = new AvocarrotInstream(vegetableAdapter);
+                    myInStreamAd1.setFrequency(2, 4);
+                    myInStreamAd1.setLayout(
                             R.layout.avo_instream_layout_1,
                             R.id.avo_container,
                             R.id.avo_native_headline,
                             R.id.avo_native_image,
                             R.id.avo_cta_button
                     );
-                    AvocarrotInstream.getInstance().loadAdForPlacement((Activity)container.getContext(), "instream_1");
+                    myInStreamAd1.loadAdForPlacement((Activity) container.getContext(), "instream_1");
 
                     ListView vegetableList = (ListView) instreamFragment1.findViewById(R.id.listView);
-                    vegetableList.setAdapter(AvocarrotInstream.getInstance());
+                    vegetableList.setAdapter(myInStreamAd1);
+
                     vegetableList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                         @Override
                         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -322,7 +359,7 @@ public class MainActivity extends ActionBarActivity
                         }
                     });
 
-                    Avocarrot.getInstance().setAdListener(new AvocarrotInstreamListener() {
+                    myInStreamAd1.setAdListener(new AvocarrotInstreamListener() {
                         @Override public void adDidLoad()                  { Log.d("Avocarrot", "adDidLoad");               }
                         @Override public void adDidNotLoad(String reason)  { Log.d("Avocarrot", "adDidNotLoad: " + reason); }
                         @Override public void adDidFailToLoad(Exception e) { Log.e("Avocarrot", "adDidFailToLoad: " + e);   }
@@ -350,9 +387,9 @@ public class MainActivity extends ActionBarActivity
                             R.id.title,
                             fruits);
 
-                    AvocarrotInstream.getInstance().initialize(fruitAdapter);
-                    AvocarrotInstream.setFrequency(1, 3);
-                    AvocarrotInstream.setLayout(
+                    AvocarrotInstream myInStreamAd2 = new AvocarrotInstream(fruitAdapter);
+                    myInStreamAd2.setFrequency(1, 3);
+                    myInStreamAd2.setLayout(
                             R.layout.avo_instream_layout_2,
                             R.id.avo_container,
                             R.id.avo_native_headline,
@@ -360,10 +397,10 @@ public class MainActivity extends ActionBarActivity
                             R.id.avo_cta_button
                     );
 
-                    AvocarrotInstream.getInstance().loadAdForPlacement((Activity) container.getContext(), "instream_2");
+                    myInStreamAd2.loadAdForPlacement((Activity) container.getContext(), "instream_2");
 
                     ListView fruitList = (ListView) instreamFragment2.findViewById(R.id.listView);
-                    fruitList.setAdapter(AvocarrotInstream.getInstance());
+                    fruitList.setAdapter(myInStreamAd2);
                     fruitList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                         @Override
                         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -372,7 +409,7 @@ public class MainActivity extends ActionBarActivity
                         }
                     });
 
-                    Avocarrot.getInstance().setAdListener(new AvocarrotInstreamListener() {
+                    myInStreamAd2.setAdListener(new AvocarrotInstreamListener() {
                         @Override public void adDidLoad()                  { Log.d("Avocarrot", "adDidLoad");               }
                         @Override public void adDidNotLoad(String reason)  { Log.d("Avocarrot", "adDidNotLoad: " + reason); }
                         @Override public void adDidFailToLoad(Exception e) { Log.e("Avocarrot", "adDidFailToLoad: " + e);   }
@@ -487,9 +524,9 @@ public class MainActivity extends ActionBarActivity
                     gridView.setAdapter(gridViewAdapter);
 
                     // Load custom Ad
-                    AvocarrotCustom.getInstance().loadAdForPlacement((Activity) container.getContext(), "custom");
-
-                    Avocarrot.getInstance().setAdListener(new AvocarrotCustomListener() {
+                    AvocarrotCustom myCustomAd1 = new AvocarrotCustom();
+                    myCustomAd1.loadAdForPlacement((Activity) container.getContext(), "custom");
+                    myCustomAd1.setAdListener(new AvocarrotCustomListener() {
                         @Override public void adDidLoad(CustomAdItem ad)     {
                             Log.d("Avocarrot", "adDidLoad");
                             gridViewAdapter.registerAd(ad);
@@ -528,13 +565,14 @@ public class MainActivity extends ActionBarActivity
                     adHeadline.setTypeface(FONT_BOLD);
 
                     // Load custom Ad
-                    AvocarrotCustom.getInstance().loadAdForPlacement((Activity) container.getContext(), "custom");
+                    AvocarrotCustom myCustomAd2 = new AvocarrotCustom();
+                    myCustomAd2.loadAdForPlacement((Activity) container.getContext(), "custom");
 
                     // Hide ad fields until ad is ready to be loaded
                     adWrapper.setVisibility(View.GONE);
                     adButton.setVisibility(View.GONE);
 
-                    Avocarrot.getInstance().setAdListener(new AvocarrotCustomListener() {
+                    myCustomAd2.setAdListener(new AvocarrotCustomListener() {
                         @Override public void adDidLoad(final CustomAdItem ad)     {
 
                             // Fill in details
@@ -568,17 +606,13 @@ public class MainActivity extends ActionBarActivity
                         @Override public void userWillLeaveApp()             { Log.d("Avocarrot", "userWillLeaveApp");           }
                         @Override public void onAdImpression(String message) { Log.d("Avocarrot", "onAdImpression: " + message); }
                         @Override public void onAdClick(String message)      { Log.d("Avocarrot", "onAdClick: " + message);      }
-
                     });
 
                     return customFragment2;
 
-                //---------------------------------------------------------------------------------------
                 default:
                     View defaultFragment = inflater.inflate(R.layout.fragment_welcome, container, false);
                     return defaultFragment;
-                //---------------------------------------------------------------------------------------
-
             }
         }
         @Override
@@ -589,11 +623,3 @@ public class MainActivity extends ActionBarActivity
         }
     }
 }
-
-
-
-
-
-
-
-

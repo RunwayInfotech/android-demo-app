@@ -61,4 +61,27 @@
         android:textColor="#FFFFFF"
         android:background="@drawable/button" />
 
+    <ProgressBar
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:layout_marginTop="54dp"
+        android:layout_below="@+id/show_activity_2"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Loading Ad ..."
+        android:textSize="18sp"
+        android:id="@+id/progressBarLabel"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textColor="@color/avocarrot_gray"
+        android:layout_below="@+id/progressBar"
+        android:layout_centerHorizontal="true" />
+
 </RelativeLayout>
