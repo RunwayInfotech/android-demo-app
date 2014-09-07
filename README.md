@@ -1,8 +1,33 @@
-android-demo-app
-================
+Avocarrot demo-app for Android
+============
 
 This is an open-source app to demonstrate how Avocarrot Native Ads look and how you can integrate them.
 
+[What is Avocarrot?](http://www.avocarrot.com/) 
+
+Screenshots
+--------------------
+![alt tag](https://cloud.githubusercontent.com/assets/1907604/4178846/f1dd93b8-36a9-11e4-8312-e583e945ea4b.png)
+
+Demo App on Google Play 
+--------------------
 [Download the demo app on Google Play](https://play.google.com/store/apps/details?id=com.avocarrot.avocarrotdemoapp.main)
 
-[What is Avocarrot?](http://www.avocarrot.com/) 
+Required Permissions
+--------------------
+
+    * INTERNET
+    * ACCESS_NETWORK_STATE
+
+Support
+---------------------
+
+If you're having problems with using the project, you can reach as at: 
+support@avocarrot.com 
+
+Documentation
+--------------------
+
+To find more information on how you can setup your Avocarrot Native Ads, go here:
+http://www.avocarrot.com/docs/#/android
+
