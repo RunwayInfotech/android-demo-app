@@ -22,7 +22,7 @@ Required Permissions
 Support
 ---------------------
 
-If you're having problems with using the project, you can reach as at: 
+If you're having problems with using the project, you can reach us at: 
 support@avocarrot.com 
 
 Documentation
