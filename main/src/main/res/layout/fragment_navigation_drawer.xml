@@ -5,7 +5,7 @@
     android:choiceMode="singleChoice"
     android:divider="@android:color/transparent"
     android:dividerHeight="0dp"
-    android:background="#d45134"
+    android:background="#eeeeee"
     android:padding="6dp"
-    tools:context="com.avocarrot.avocarrotdemoapp.main.NavigationDrawerFragment"
+    tools:context="com.avocarrot.avocarrotdemoapp.main.Helpers.NavigationDrawerFragment"
     android:alpha="0.95" />

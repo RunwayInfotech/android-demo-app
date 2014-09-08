@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:minHeight="250dp"
+    android:background="@drawable/plain_border">
+
+    <ImageView
+        android:id="@+id/avo_native_image"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:adjustViewBounds="true"
+        />
+
+    <RelativeLayout
+        android:id="@+id/tile_title_wrapper"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/avo_native_image"
+        android:padding="12dp"
+        android:background="#fefefe">
+
+
+        <TextView
+            android:id="@+id/avo_native_headline"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Title"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textStyle="normal"
+            android:textSize="14dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="15dp"
+            android:layout_centerHorizontal="true" />
+
+
+        <TextView
+            android:id="@+id/avo_ad_sponsored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:layout_below="@+id/avo_native_headline"
+            android:singleLine="true"
+            android:textColor="#bbbbbb"
+            android:textSize="14dp"
+            android:text="Sponsored "
+            android:textStyle="italic"
+            android:paddingTop="3dp"/>
+
+            <Button
+                android:id="@+id/avo_cta_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/avo_native_headline"
+                android:layout_alignParentRight="true"
+                android:minHeight="20dp"
+                android:padding="7dp"
+                android:textColor="#ffffff"
+                android:background="#3562a0"
+                android:textSize="12dp"
+                android:text="Learn More" />
+    </RelativeLayout>
+
+</RelativeLayout>

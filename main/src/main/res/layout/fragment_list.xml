@@ -1,0 +1,31 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.avocarrot.avocarrotdemoapp.main.MainActivity$PlaceholderFragment">
+
+    <ImageView
+        android:id="@+id/topBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="Ad Image"
+        android:src="@drawable/fake_demo_list_icon" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView"
+        android:layout_below="@+id/topBar"
+        android:layout_above="@+id/bottomBar"
+        android:layout_centerHorizontal="true"/>
+
+
+    <ImageView
+        android:id="@+id/bottomBar"
+        android:layout_width="fill_parent"
+        android:scaleType="fitXY"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/list_bottom" />
+
+</RelativeLayout>
