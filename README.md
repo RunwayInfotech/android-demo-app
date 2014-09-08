@@ -16,8 +16,8 @@ Demo App on Google Play
 Required Permissions
 --------------------
 
-    * INTERNET
-    * ACCESS_NETWORK_STATE
+    INTERNET
+    ACCESS_NETWORK_STATE
 
 Support
 ---------------------
