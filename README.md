@@ -7,7 +7,7 @@ This is an open-source app to demonstrate how Avocarrot Native Ads look and how 
 
 Screenshots
 --------------------
-![alt tag](https://cloud.githubusercontent.com/assets/1907604/4178846/f1dd93b8-36a9-11e4-8312-e583e945ea4b.png)
+![alt tag](https://s3.amazonaws.com/avocarrot_various/integrations.png)
 
 Demo App on Google Play 
 --------------------
@@ -22,7 +22,7 @@ Required Permissions
 Support
 ---------------------
 
-If you're having problems with using the project, you can reach as at: 
+If you're having problems with using the project, you can reach us at: 
 support@avocarrot.com 
 
 Documentation
