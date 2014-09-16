@@ -27,7 +27,7 @@ public class DemoContent {
                 "feed_avatar_5.png", "feed_post_5.png", "feed_image_square_5.png"));
         data.add(new DemoAvatarDetails(myContext,"Raymond Hoerner", "Yesterday"  , "Paris"      , "To buy or not to buy?","0",
                 "feed_avatar_6.png", "feed_post_6.png", "feed_image_square_6.png"));
-        data.add(new DemoAvatarDetails(myContext,"Thomas Mena", "2 days ago"  , "Rome"      , "Didn't know I had to ask.. ","1",
+        data.add(new DemoAvatarDetails(myContext,"Christalle Comeau", "2 days ago"  , "Rome"      , "Didn't know I had to ask.. ","1",
                 "feed_avatar_7.png", "feed_post_7.png", "feed_image_square_7.png"));
         data.add(new DemoAvatarDetails(myContext,"James Tran", "2 days ago"  , "Athens"      , "Feeling excited! :D ","3",
                 "feed_avatar_8.png", "feed_post_8.png", "feed_image_square_8.png"));
@@ -66,7 +66,6 @@ public class DemoContent {
             this.squareImage = loadDataFromAsset(squareImage, mContext);
             this.image = loadDataFromAsset(image, mContext);
             this.icon = loadDataFromAsset(icon, mContext);
-
 
         }
     }
