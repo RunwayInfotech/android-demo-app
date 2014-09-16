@@ -36,7 +36,7 @@ public class ExampleFeed extends LinearLayout {
         // Custom adapter for GridView
         class MyCustomAdapter extends BaseAdapter {
 
-            private DemoContent content = new DemoContent();
+            private DemoContent content = new DemoContent(getContext());
             private boolean[]animatedCells ;
 
             private LayoutInflater inflater;
@@ -91,8 +91,8 @@ public class ExampleFeed extends LinearLayout {
                 feedName.setText(content.getNameFor(position));
                 feedDate.setText(content.getDateFor(position));
                 feedLikeCount.setText(content.getNumberFor(position));
-                feedIcon.setImageResource(content.getIconFor(position));
-                feedImage.setImageResource(content.getImageFor(position));
+                feedIcon.setImageDrawable(content.getIconFor(position));
+                feedImage.setImageDrawable(content.getImageFor(position));
 
                 handleAnimation(currentView,position);
 

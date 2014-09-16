@@ -9,7 +9,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:contentDescription="Ad Image"
-        android:src="@drawable/fake_demo_list_icon" />
+        android:src="@drawable/demo_list_bar" />
 
     <ListView
         android:layout_width="wrap_content"

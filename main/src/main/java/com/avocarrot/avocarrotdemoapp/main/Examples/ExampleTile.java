@@ -41,7 +41,7 @@ public class ExampleTile extends LinearLayout {
 
             private int adSlotPosition = 3;
             private boolean[] animatedCells;
-            private DemoContent content = new DemoContent();
+            private DemoContent content = new DemoContent(getContext());
 
             private LayoutInflater inflater;
             private CustomAdItem customAd = null;
@@ -138,7 +138,7 @@ public class ExampleTile extends LinearLayout {
                     tileText.setText(content.getPostFor(currentPosition));
                     tileNumber.setText(content.getNumberFor(currentPosition));
                     tileLocation.setText(content.getLocationFor(currentPosition));
-                    tileImage.setImageResource(content.getSquareImageFor(currentPosition));
+                    tileImage.setImageDrawable(content.getSquareImageFor(currentPosition));
                 }
                 handleAnimation(gridView, currentPosition);
                 return gridView;

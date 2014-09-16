@@ -21,9 +21,7 @@
         android:id="@+id/feed_icon"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_marginRight="10dp"
-        android:contentDescription="Ad Image"
-        android:src="@drawable/feed_avatar_1" />
+        android:layout_marginRight="10dp" />
 
     <TextView
         android:id="@+id/feed_name"
@@ -92,8 +90,7 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:scaleType="fitXY"
-            android:layout_gravity="center"
-            android:src="@drawable/feed_post_1" />
+            android:layout_gravity="center"/>
 
 
         <RelativeLayout

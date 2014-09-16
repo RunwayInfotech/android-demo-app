@@ -31,7 +31,7 @@ public class ExampleList extends LinearLayout {
         addView(baseView);
 
         class MyCustomAdapter extends BaseAdapter {
-            private DemoContent content = new DemoContent();
+            private DemoContent content = new DemoContent(getContext());
 
             private LayoutInflater inflater;
             private CustomAdItem customAd = null;
@@ -56,7 +56,7 @@ public class ExampleList extends LinearLayout {
                 avatarName.setText(content.getNameFor(position));
                 avatarLocation.setText(content.getLocationFor(position));
                 avatarStatus.setText(content.getPostFor(position));
-                avatarIcon.setImageResource(content.getIconFor(position));
+                avatarIcon.setImageDrawable(content.getIconFor(position));
 
                 return currentView;
             }
