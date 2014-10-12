@@ -114,7 +114,7 @@ public class ExampleFeed extends LinearLayout {
             @Override public void adDidFailToLoad(Exception e) { Log.e("Avocarrot", "adDidFailToLoad: " + e);   }
             @Override public void userWillLeaveApp()           { Log.d("Avocarrot", "userWillLeaveApp");        }
         });
-        myFeedAdapter.setFrequency(1, 4);
+        myFeedAdapter.setFrequency(1, 2);
         myFeedAdapter.setLayout(
                 R.layout.avo_feed_layout,
                 R.id.avo_container,

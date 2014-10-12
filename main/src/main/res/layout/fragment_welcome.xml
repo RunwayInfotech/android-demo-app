@@ -16,11 +16,12 @@
 
         <ImageView
             android:id="@+id/list_avatar_image"
-            android:layout_width="121dp"
-            android:layout_height="198dp"
+            android:layout_width="147dp"
+            android:layout_height="194dp"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:paddingBottom="60dp"
+            android:layout_marginBottom="10dp"
+            android:layout_above="@+id/textView2"
             android:scaleType="fitXY"
             android:src="@drawable/avocarrot_logo" />
 
@@ -36,7 +37,7 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="This is an open-source app to demonstrate how Avocarrot Native \n Ads look and how you can integrate them."
             android:id="@+id/textView2"
-            android:textColor="#ffffff"
+            android:textColor="#58585b"
             android:textSize="19dp"
             android:gravity="center"
             android:layout_centerVertical="true"
@@ -48,14 +49,14 @@
             android:layout_marginBottom="20dp"
             />
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Swipe from the left edge of the screen \n to navigate this app."
             android:id="@+id/textView1"
             android:gravity="center"
             android:textSize="15sp"
-            android:textColor="#ffffff"
+            android:textColor="#F26735"
             android:layout_centerHorizontal="true"
             android:layout_alignParentTop="true"
             android:padding="10dp"
