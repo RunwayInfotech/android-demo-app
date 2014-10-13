@@ -2,7 +2,7 @@ apply plugin: 'android'
 
 android {
     compileSdkVersion 19
-    buildToolsVersion '19.0.3'
+    buildToolsVersion "20.0.0"
     defaultConfig {
         minSdkVersion 9
         targetSdkVersion 19
@@ -16,6 +16,7 @@ android {
         }
     }
     productFlavors {
+
     }
 }
 
@@ -25,5 +26,4 @@ dependencies {
     compile 'com.google.android.gms:play-services:+'
     compile files('libs/classes.jar')
 }
-
 

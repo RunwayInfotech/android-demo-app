@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/welcome_gradient"
-    tools:context="com.avocarrot.avocarrotdemoapp.main.MainActivity$PlaceholderFragment">
+    tools:context="com.avocarrot.demoapp.main.MainActivity$PlaceholderFragment">
 
     <RelativeLayout
         android:layout_width="match_parent"

@@ -1,4 +1,4 @@
-package com.avocarrot.avocarrotdemoapp.main.Examples;
+package com.avocarrot.demoapp.main.Examples;
 
 import android.app.Activity;
 import android.content.Context;
@@ -15,8 +15,8 @@ import android.widget.TextView;
 import com.avocarrot.androidsdk.AvocarrotInstreamListener;
 import com.avocarrot.androidsdk.custom.CustomAdItem;
 import com.avocarrot.androidsdk.instream.AvocarrotInstream;
-import com.avocarrot.avocarrotdemoapp.main.Helpers.DemoContent;
-import com.avocarrot.avocarrotdemoapp.main.R;
+import com.avocarrot.demoapp.main.Helpers.DemoContent;
+import com.avocarrot.demoapp.main.R;
 
 public class ExampleList extends LinearLayout {
 
@@ -68,7 +68,7 @@ public class ExampleList extends LinearLayout {
         // Avocarrot integration: In-Stream
 
         AvocarrotInstream myInStreamAd1 = new AvocarrotInstream(myListAdapter);
-        myInStreamAd1.setFrequency(2, 2);
+        myInStreamAd1.setFrequency(2, 3);
         myInStreamAd1.setLayout(
                 R.layout.avo_list_layout,
                 R.id.avo_container,

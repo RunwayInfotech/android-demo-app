@@ -1,4 +1,4 @@
-package com.avocarrot.avocarrotdemoapp.main.Helpers;
+package com.avocarrot.demoapp.main.Helpers;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;

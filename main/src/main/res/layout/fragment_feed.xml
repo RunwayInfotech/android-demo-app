@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/pattern_repeat"
-    tools:context="com.avocarrot.avocarrotdemoapp.main.MainActivity$PlaceholderFragment"
+    tools:context="com.avocarrot.demoapp.main.MainActivity$PlaceholderFragment"
     android:id="@+id/fragment_feed">
 
 

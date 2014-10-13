@@ -1,4 +1,4 @@
-package com.avocarrot.avocarrotdemoapp.main;
+package com.avocarrot.demoapp.main;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -14,13 +14,13 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.avocarrot.androidsdk.Avocarrot;
-import com.avocarrot.avocarrotdemoapp.main.Examples.ExampleGame;
-import com.avocarrot.avocarrotdemoapp.main.Examples.ExampleFeed;
-import com.avocarrot.avocarrotdemoapp.main.Examples.ExampleInterstitial1;
-import com.avocarrot.avocarrotdemoapp.main.Examples.ExampleInterstitial2;
-import com.avocarrot.avocarrotdemoapp.main.Examples.ExampleList;
-import com.avocarrot.avocarrotdemoapp.main.Examples.ExampleTile;
-import com.avocarrot.avocarrotdemoapp.main.Helpers.NavigationDrawerFragment;
+import com.avocarrot.demoapp.main.Examples.ExampleGame;
+import com.avocarrot.demoapp.main.Examples.ExampleFeed;
+import com.avocarrot.demoapp.main.Examples.ExampleInterstitial1;
+import com.avocarrot.demoapp.main.Examples.ExampleInterstitial2;
+import com.avocarrot.demoapp.main.Examples.ExampleList;
+import com.avocarrot.demoapp.main.Examples.ExampleTile;
+import com.avocarrot.demoapp.main.Helpers.NavigationDrawerFragment;
 
 public class MainActivity extends ActionBarActivity
         implements NavigationDrawerFragment.NavigationDrawerCallbacks{

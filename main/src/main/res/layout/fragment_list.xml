@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.avocarrot.avocarrotdemoapp.main.MainActivity$PlaceholderFragment">
+    tools:context="com.avocarrot.demoapp.main.MainActivity$PlaceholderFragment">
 
     <ImageView
         android:id="@+id/topBar"

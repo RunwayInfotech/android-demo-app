@@ -1,4 +1,4 @@
-package com.avocarrot.avocarrotdemoapp.main.Examples;
+package com.avocarrot.demoapp.main.Examples;
 
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
@@ -22,7 +22,7 @@ import android.widget.TextView;
 import com.avocarrot.androidsdk.AvocarrotCustomListener;
 import com.avocarrot.androidsdk.custom.AvocarrotCustom;
 import com.avocarrot.androidsdk.custom.CustomAdItem;
-import com.avocarrot.avocarrotdemoapp.main.R;
+import com.avocarrot.demoapp.main.R;
 
 public class ExampleGame extends LinearLayout {
 

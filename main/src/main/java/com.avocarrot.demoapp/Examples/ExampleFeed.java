@@ -1,4 +1,4 @@
-package com.avocarrot.avocarrotdemoapp.main.Examples;
+package com.avocarrot.demoapp.main.Examples;
 
 import android.app.Activity;
 import android.content.Context;
@@ -16,8 +16,8 @@ import android.widget.TextView;
 import com.avocarrot.androidsdk.AvocarrotInstreamListener;
 import com.avocarrot.androidsdk.custom.CustomAdItem;
 import com.avocarrot.androidsdk.instream.AvocarrotInstream;
-import com.avocarrot.avocarrotdemoapp.main.Helpers.DemoContent;
-import com.avocarrot.avocarrotdemoapp.main.R;
+import com.avocarrot.demoapp.main.Helpers.DemoContent;
+import com.avocarrot.demoapp.main.R;
 
 import java.util.Arrays;
 
@@ -114,7 +114,7 @@ public class ExampleFeed extends LinearLayout {
             @Override public void adDidFailToLoad(Exception e) { Log.e("Avocarrot", "adDidFailToLoad: " + e);   }
             @Override public void userWillLeaveApp()           { Log.d("Avocarrot", "userWillLeaveApp");        }
         });
-        myFeedAdapter.setFrequency(1, 2);
+        myFeedAdapter.setFrequency(1, 4);
         myFeedAdapter.setLayout(
                 R.layout.avo_feed_layout,
                 R.id.avo_container,

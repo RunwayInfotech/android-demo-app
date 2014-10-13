@@ -1,4 +1,4 @@
-package com.avocarrot.avocarrotdemoapp.main.Examples;
+package com.avocarrot.demoapp.main.Examples;
 
 import android.app.Activity;
 import android.content.Context;
@@ -18,8 +18,8 @@ import android.widget.TextView;
 import com.avocarrot.androidsdk.AvocarrotCustomListener;
 import com.avocarrot.androidsdk.custom.AvocarrotCustom;
 import com.avocarrot.androidsdk.custom.CustomAdItem;
-import com.avocarrot.avocarrotdemoapp.main.Helpers.DemoContent;
-import com.avocarrot.avocarrotdemoapp.main.R;
+import com.avocarrot.demoapp.main.Helpers.DemoContent;
+import com.avocarrot.demoapp.main.R;
 
 import java.util.Arrays;
 

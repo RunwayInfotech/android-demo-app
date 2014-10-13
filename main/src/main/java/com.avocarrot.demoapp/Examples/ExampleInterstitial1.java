@@ -1,4 +1,4 @@
-package com.avocarrot.avocarrotdemoapp.main.Examples;
+package com.avocarrot.demoapp.main.Examples;
 
 import android.app.Activity;
 import android.content.Context;
@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import com.avocarrot.androidsdk.AvocarrotInterstitialListener;
 import com.avocarrot.androidsdk.interstitial.AvocarrotInterstitial;
-import com.avocarrot.avocarrotdemoapp.main.R;
+import com.avocarrot.demoapp.main.R;
 
 public class ExampleInterstitial1 extends LinearLayout {
 

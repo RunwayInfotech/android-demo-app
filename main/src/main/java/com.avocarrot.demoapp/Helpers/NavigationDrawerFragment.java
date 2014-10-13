@@ -1,4 +1,4 @@
-package com.avocarrot.avocarrotdemoapp.main.Helpers;
+package com.avocarrot.demoapp.main.Helpers;
 
 import android.app.Activity;
 import android.content.Context;
@@ -27,7 +27,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.avocarrot.avocarrotdemoapp.main.R;
+import com.avocarrot.demoapp.main.R;
 
 /**
  * Fragment used for managing interactions for and presentation of a navigation drawer.

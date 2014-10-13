@@ -4,7 +4,7 @@
     android:layout_height="fill_parent"
     android:background="@drawable/game_background_sky"
     android:id="@+id/game_screen"
-    tools:context="com.avocarrot.avocarrotdemoapp.main.MainActivity$PlaceholderFragment">
+    tools:context="com.avocarrot.demoapp.main.MainActivity$PlaceholderFragment">
 
     <ImageView
         android:id="@+id/cloud1"
