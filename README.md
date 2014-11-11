@@ -11,7 +11,7 @@ Screenshots
 
 Demo App on Google Play 
 --------------------
-[Download the demo app on Google Play](https://play.google.com/store/apps/details?id=com.avocarrot.avocarrotdemoapp.main)
+[Download the demo app on Google Play](https://play.google.com/store/apps/details?id=com.avocarrot.demoapp.main)
 
 Required Permissions
 --------------------
