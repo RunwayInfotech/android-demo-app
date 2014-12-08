@@ -75,7 +75,6 @@ public class NavigationDrawerFragment extends Fragment {
         private Context mContext;
 
         private String[][] data = new String[][]{
-//            { getString(R.string.menu_option_1),getString(R.string.menu_option_1_description)},
             { getString(R.string.menu_option_2),getString(R.string.menu_option_2_description)},
             { getString(R.string.menu_option_3),getString(R.string.menu_option_3_description)},
             { getString(R.string.menu_option_4),getString(R.string.menu_option_4_description)},
@@ -84,7 +83,6 @@ public class NavigationDrawerFragment extends Fragment {
             { getString(R.string.menu_option_7),getString(R.string.menu_option_7_description)},
         };
         private int[] icons= {
-//            0,
             R.drawable.icon_menu_feed,
             R.drawable.icon_menu_list,
             R.drawable.icon_menu_tile,
@@ -132,13 +130,8 @@ public class NavigationDrawerFragment extends Fragment {
             holder.title.setText(data[position][0]);
             holder.subtitle.setText(data[position][1]);
             holder.icon.setImageResource(icons[position]);
-            holder.stripe.setVisibility( mCurrentSelectedPosition == position ? View.VISIBLE : View.INVISIBLE);
-
-            // Remove welcome option from the menu
-//            if (position == 0 ){
-//                vi.setLayoutParams(new AbsListView.LayoutParams(1, 1));
-//            }
             // Show current menu (show a grey stripe)
+            holder.stripe.setVisibility( mCurrentSelectedPosition == position ? View.VISIBLE : View.INVISIBLE);
 
             return convertView;
         }
