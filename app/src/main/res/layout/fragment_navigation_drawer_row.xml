@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="7dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="7dp">
+
+    <ImageView
+        android:id="@+id/menu_icon"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/menu_stripe"
+        android:layout_toRightOf="@+id/menu_icon"
+        android:gravity="left"
+        android:singleLine="true"
+        android:text="Title Here"
+        android:textColor="#d45134"
+        android:textSize="20dp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/subTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_toLeftOf="@+id/menu_stripe"
+        android:layout_toRightOf="@+id/menu_icon"
+        android:gravity="left"
+        android:singleLine="true"
+        android:text="Title Here"
+        android:textColor="#000000"
+        android:textSize="13dp"
+        android:textStyle="normal" />
+
+    <View
+        android:id="@+id/menu_stripe"
+        android:layout_width="4dp"
+        android:layout_height="55dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dp"
+        android:background="#9d9d9d" />
+
+</RelativeLayout>

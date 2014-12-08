@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/avo_container"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/plain_border"
+    android:minHeight="250dp">
+
+    <RelativeLayout
+        android:id="@+id/avo_native_image_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/avo_native_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/avo_native_headline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/avo_native_image_wrapper"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:padding="2.5dp"
+        android:text="Title"
+        android:textAlignment="center"
+        android:textSize="14dp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/avo_native_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/avo_native_headline"
+        android:layout_marginBottom="6dp"
+        android:layout_marginTop="2dp"
+        android:gravity="center"
+        android:padding="2.5dp"
+        android:text="Title"
+        android:textAlignment="center"
+        android:textSize="12dp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/avo_ad_sponsored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignTop="@+id/avo_cta_button"
+        android:layout_toLeftOf="@+id/avo_cta_button"
+        android:gravity="left"
+        android:padding="5dp"
+        android:singleLine="true"
+        android:text="Sponsored "
+        android:textColor="#bbbbbb"
+        android:textSize="12dp"
+        android:textStyle="italic" />
+
+    <Button
+        android:id="@+id/avo_cta_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="#3562a0"
+        android:minHeight="20dp"
+        android:padding="5dp"
+        android:text="Learn More"
+        android:textColor="#ffffff"
+        android:textSize="12dp" />
+
+</RelativeLayout>
