@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.avocarrot.androidsdk.interstitial.AvocarrotInterstitial;
 import com.avocarrot.androidsdk.interstitial.AvocarrotInterstitialListener;
+import com.avocarrot.demoapp.main.R;
 
 public class ExampleInterstitial2 extends Fragment {
 

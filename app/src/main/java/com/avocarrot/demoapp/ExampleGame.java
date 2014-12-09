@@ -25,6 +25,7 @@ import android.widget.TextView;
 import com.avocarrot.androidsdk.custom.AvocarrotCustom;
 import com.avocarrot.androidsdk.custom.AvocarrotCustomListener;
 import com.avocarrot.androidsdk.custom.CustomAdItem;
+import com.avocarrot.demoapp.main.R;
 
 import static android.view.View.GONE;
 import static android.view.View.VISIBLE;

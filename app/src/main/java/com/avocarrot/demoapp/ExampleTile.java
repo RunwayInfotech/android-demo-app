@@ -15,6 +15,7 @@ import android.widget.TextView;
 
 import com.avocarrot.androidsdk.instream.AvocarrotInstream;
 import com.avocarrot.demoapp.helpers.DemoContent;
+import com.avocarrot.demoapp.main.R;
 
 import java.util.Arrays;
 

@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.avocarrot.demoapp.helpers.NavigationDrawerFragment;
+import com.avocarrot.demoapp.main.R;
 
 
 public class MainActivity extends ActionBarActivity implements NavigationDrawerFragment.NavigationDrawerCallbacks{

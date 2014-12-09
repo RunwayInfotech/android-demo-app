@@ -28,7 +28,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.avocarrot.demoapp.R;
+import com.avocarrot.demoapp.main.R;
 
 /**
  * Fragment used for managing interactions for and presentation of a navigation drawer.
