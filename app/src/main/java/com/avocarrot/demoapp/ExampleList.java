@@ -34,13 +34,6 @@ public class ExampleList extends ListFragment {
         myInStreamAd1.setSandbox(true);
         myInStreamAd1.setLogger(true, "ALL");
         myInStreamAd1.setFrequency(2, 3);
-        myInStreamAd1.setLayout(
-                R.layout.avo_list_layout,
-                R.id.avo_container,
-                R.id.avo_native_headline,
-                R.id.avo_native_image,
-                R.id.avo_cta_button
-        );
         myInStreamAd1.loadAdForPlacement(getActivity(), "morpheus_list");
         myInStreamAd1.setAdListener(new AvocarrotInstreamListener() {
             @Override

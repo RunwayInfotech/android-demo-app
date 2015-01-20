@@ -64,15 +64,6 @@ public class ExampleFeed extends ListFragment {
 
         });
         myFeedAdapter.setFrequency(1, 4);
-        myFeedAdapter.setLayout(
-                R.layout.avo_feed_layout,
-                R.id.avo_container,
-                R.id.avo_native_headline,
-                R.id.avo_native_description,
-                R.id.avo_native_image,
-                R.id.avo_native_creative,
-                R.id.avo_cta_button
-        );
 
         myFeedAdapter.loadAdForPlacement(getActivity(), "instream_1");
         setListAdapter(myFeedAdapter);
