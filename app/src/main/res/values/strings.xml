@@ -16,9 +16,11 @@
     <string name="menu_option_5">Games</string>
     <string name="menu_option_5_description">Custom</string>
     <string name="menu_option_6">Loader View 1</string>
-    <string name="menu_option_6_description">Interstitial</string>
+    <string name="menu_option_6_description">Interstitial Full</string>
     <string name="menu_option_7">Loader View 2</string>
-    <string name="menu_option_7_description">Interstitial</string>
+    <string name="menu_option_7_description">Interstitial Simple</string>
+    <string name="menu_option_8">Loader View 3</string>
+    <string name="menu_option_8_description">Interstitial Portrait</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>

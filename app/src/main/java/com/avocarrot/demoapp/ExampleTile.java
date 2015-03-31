@@ -38,8 +38,7 @@ public class ExampleTile extends Fragment {
 
         // --------------------------------------------------------
         // Avocarrot Integration: Instream
-        AvocarrotInstream tileAdapter = new AvocarrotInstream(adapter);
-        tileAdapter.initWithKey("3dbab458941a2446e2b48ac866b42027f5cac288");
+        com.avocarrot.androidsdk.AvocarrotInstream tileAdapter = new com.avocarrot.androidsdk.AvocarrotInstream(adapter, getActivity(), "3dbab458941a2446e2b48ac866b42027f5cac288", "custom");
         tileAdapter.setSandbox(true);
         tileAdapter.setLogger(true, "ALL");
         tileAdapter.setFrequency(3, 3);
@@ -52,7 +51,6 @@ public class ExampleTile extends Fragment {
             R.id.avo_native_image,
             R.id.avo_cta_button
         );
-        tileAdapter.loadAdForPlacement(getActivity(), "custom");
 
         gridView.setAdapter(tileAdapter);
         // --------------------------------------------------------
