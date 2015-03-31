@@ -7,10 +7,10 @@ This is an open-source app to demonstrate how Avocarrot Native Ads look and how 
 
 Screenshots
 --------------------
-<img src="https://app.avocarrot.com/assets/placements/List.png" height="380px" width="270px" />
-<img src="https://app.avocarrot.com/assets/placements/Feed.png" height="380px" width="270px" />
-<img src="https://app.avocarrot.com/assets/placements/NaturalPause.png" height="380px" width="270px" />
-<img src="https://app.avocarrot.com/assets/placements/CreateYourOwn.png" height="380px" width="270px" />
+<img src="https://app.avocarrot.com/assets/placements/List.png" width="200px" />
+<img src="https://app.avocarrot.com/assets/placements/Feed.png" width="200px" />
+<img src="https://app.avocarrot.com/assets/placements/NaturalPause.png" width="200px" />
+<img src="https://app.avocarrot.com/assets/placements/CreateYourOwn.png" width="200px" />
 
 Demo App on Google Play 
 --------------------
