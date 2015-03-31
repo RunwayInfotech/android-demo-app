@@ -81,12 +81,14 @@ public class NavigationDrawerFragment extends Fragment {
             { getString(R.string.menu_option_5),getString(R.string.menu_option_5_description)},
             { getString(R.string.menu_option_6),getString(R.string.menu_option_6_description)},
             { getString(R.string.menu_option_7),getString(R.string.menu_option_7_description)},
+            { getString(R.string.menu_option_8),getString(R.string.menu_option_8_description)},
         };
         private int[] icons= {
             R.drawable.icon_menu_feed,
             R.drawable.icon_menu_list,
             R.drawable.icon_menu_tile,
             R.drawable.icon_menu_custom,
+            R.drawable.icon_menu_interstitial,
             R.drawable.icon_menu_interstitial,
             R.drawable.icon_menu_interstitial
         };

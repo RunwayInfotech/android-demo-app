@@ -6,11 +6,8 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
 
 import com.avocarrot.demoapp.helpers.NavigationDrawerFragment;
 import com.avocarrot.demoapp.main.R;
@@ -50,18 +47,6 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerF
             .commit();
     }
 
-    public void onSectionAttached(int number) {
-        switch (number) {
-            case 1:  mTitle = getString(R.string.menu_option_1); break;
-            case 2:  mTitle = getString(R.string.menu_option_2); break;
-            case 3:  mTitle = getString(R.string.menu_option_3); break;
-            case 4:  mTitle = getString(R.string.menu_option_4); break;
-            case 5:  mTitle = getString(R.string.menu_option_5); break;
-            case 6:  mTitle = getString(R.string.menu_option_6); break;
-        }
-
-    }
-
     public void restoreActionBar() {
         ActionBar actionBar = getSupportActionBar();
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_STANDARD);
@@ -97,8 +82,9 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerF
             case 1: return ExampleList.getInstance();
             case 2: return ExampleTile.getInstance();
             case 3: return ExampleGame.getInstance();
-            case 4: return ExampleInterstitial1.getInstance();
-            case 5: return ExampleInterstitial2.getInstance();
+            case 4: return ExampleInterstitialSimple.getInstance();
+            case 5: return ExampleInterstitialFull.getInstance();
+            case 6: return ExampleInterstitialPortrait.getInstance();
 
             default: return Welcome.getInstance();
         }

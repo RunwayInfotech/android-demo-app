@@ -22,10 +22,12 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.avocarrot.androidsdk.custom.AvocarrotCustom;
-import com.avocarrot.androidsdk.custom.AvocarrotCustomListener;
-import com.avocarrot.androidsdk.custom.CustomAdItem;
+import com.avocarrot.androidsdk.AvocarrotCustom;
+import com.avocarrot.androidsdk.AvocarrotCustomListener;
+import com.avocarrot.androidsdk.CustomModel;
 import com.avocarrot.demoapp.main.R;
+
+import java.util.List;
 
 import static android.view.View.GONE;
 import static android.view.View.VISIBLE;
@@ -86,16 +88,20 @@ public class ExampleGame extends Fragment {
 
 
         // Avocarrot Integration
-        AvocarrotCustom myCustomAd = new AvocarrotCustom();
-        myCustomAd.initWithKey("3dbab458941a2446e2b48ac866b42027f5cac288");
+        final AvocarrotCustom myCustomAd = new AvocarrotCustom(getActivity(), "3dbab458941a2446e2b48ac866b42027f5cac288", "custom" );
         myCustomAd.setSandbox(true);
         myCustomAd.setLogger(true, "ALL");
-        myCustomAd.loadAdForPlacement(getActivity(), "custom");
-        myCustomAd.setAdListener(new AvocarrotCustomListener() {
+        myCustomAd.setListener(new AvocarrotCustomListener() {
             @Override
-            public void adDidLoad(final CustomAdItem ad) {
+            public void onAdLoaded(List<CustomModel> ads) {
+                super.onAdLoaded(ads);
+
+                if ((ads==null) || (ads.size()<1))
+                    return;
 
                 Log.d("Avocarrot", "Ad did load");
+
+                final CustomModel ad = ads.get(0);
 
                 ImageView adImage = (ImageView) game_notification_board.findViewById(R.id.avo_native_creative);
                 TextView adDescription = (TextView) game_notification_board.findViewById(R.id.avo_native_description);
@@ -103,19 +109,19 @@ public class ExampleGame extends Fragment {
                 Button adButton = (Button) game_notification_board.findViewById(R.id.avo_cta_button);
                 Button closeButton = (Button) game_notification_board.findViewById(R.id.avo_close_button);
 
-                adDescription.setText(ad.getSubHeadline());
-                headline.setText(ad.getHeadline());
-                adImage.setImageBitmap(ad.getImage());
+                adDescription.setText(ad.getDescription());
+                headline.setText(ad.getTitle());
+                myCustomAd.loadImage(ad, adImage);
                 adButton.setText(ad.getCTAText());
 
                 // Bind View
-                ad.bindView(game_notification_board);
+                myCustomAd.bindView(ad, game_notification_board);
 
                 // Show ad on click
-                adButton.setOnClickListener(new View.OnClickListener() {
+                game_notification_board.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        ad.handleClick();
+                        myCustomAd.handleClick(ad);
                     }
                 });
 
@@ -126,34 +132,12 @@ public class ExampleGame extends Fragment {
                         game_notification_board.animate().alpha(0).setDuration(100).setInterpolator(new AccelerateInterpolator());
                     }
                 });
-            }
 
-            @Override
-            public void adDidNotLoad(String reason) {
-                Log.d("Avocarrot", "adDidNotLoad: " + reason);
             }
-
-            @Override
-            public void adDidFailToLoad(Exception e) {
-                Log.e("Avocarrot", "adDidFailToLoad", e);
-            }
-
-            @Override
-            public void onAdImpression(String message) {
-                Log.d("Avocarrot", "onAdImpression: " + message);
-            }
-
-            @Override
-            public void onAdClick(String message) {
-                Log.d("Avocarrot", "onAdClick: " + message);
-            }
-
-            @Override
-            public void userWillLeaveApp() {
-                Log.d("Avocarrot", "userWillLeaveApp");
-            }
-
         });
+
+        myCustomAd.loadAd();
+
 
     }
 

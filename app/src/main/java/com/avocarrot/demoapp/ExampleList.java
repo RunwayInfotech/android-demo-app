@@ -12,9 +12,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.avocarrot.androidsdk.custom.CustomAdItem;
-import com.avocarrot.androidsdk.instream.AvocarrotInstream;
-import com.avocarrot.androidsdk.instream.AvocarrotInstreamListener;
+import com.avocarrot.androidsdk.AvocarrotInstream;
 import com.avocarrot.demoapp.helpers.DemoContent;
 import com.avocarrot.demoapp.main.R;
 
@@ -29,33 +27,10 @@ public class ExampleList extends ListFragment {
         // --------------------------------------------------------
         // Avocarrot integration: In-Stream
 
-        AvocarrotInstream myInStreamAd1 = new AvocarrotInstream(myListAdapter);
-        myInStreamAd1.initWithKey("3dbab458941a2446e2b48ac866b42027f5cac288");
+        AvocarrotInstream myInStreamAd1 = new AvocarrotInstream(myListAdapter, getActivity(), "3dbab458941a2446e2b48ac866b42027f5cac288", "0aa0d2193aca5716b25bfaee403a91f588953a07");
         myInStreamAd1.setSandbox(true);
         myInStreamAd1.setLogger(true, "ALL");
         myInStreamAd1.setFrequency(2, 3);
-        myInStreamAd1.loadAdForPlacement(getActivity(), "morpheus_list");
-        myInStreamAd1.setAdListener(new AvocarrotInstreamListener() {
-            @Override
-            public void adDidLoad() {
-                Log.d("Avocarrot", "adDidLoad");
-            }
-
-            @Override
-            public void adDidNotLoad(String reason) {
-                Log.d("Avocarrot", "adDidNotLoad: " + reason);
-            }
-
-            @Override
-            public void adDidFailToLoad(Exception e) {
-                Log.e("Avocarrot", "adDidFailToLoad: " + e);
-            }
-
-            @Override
-            public void userWillLeaveApp() {
-                Log.d("Avocarrot", "userWillLeaveApp");
-            }
-        });
 
         // --------------------------------------------------------
 
@@ -67,7 +42,6 @@ public class ExampleList extends ListFragment {
         private DemoContent content;
 
         private LayoutInflater inflater;
-        private CustomAdItem customAd = null;
 
         @Override
         public int getCount() {
