@@ -5,6 +5,12 @@ This is an open-source app to demonstrate how Avocarrot Native Ads look and how 
 
 [Learn More](http://www.avocarrot.com/) 
 
+Screenshots
+--------------------
+<img src="https://cloud.githubusercontent.com/assets/1907604/6939141/6f1b1784-d861-11e4-9a89-7f4c5f424b80.png" width="220px" />
+<img src="https://cloud.githubusercontent.com/assets/1907604/6939142/6f38e246-d861-11e4-9f11-ebacfbd228c6.png" width="220px" />
+<img src="https://cloud.githubusercontent.com/assets/1907604/6939143/6f40d9f6-d861-11e4-87a3-e933119559ba.png" width="220px" />
+
 
 Demo App on Google Play 
 --------------------
