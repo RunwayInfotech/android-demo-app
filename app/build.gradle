@@ -1,15 +1,15 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 21
+    compileSdkVersion 22
     buildToolsVersion "21.1.2"
 
     defaultConfig {
         applicationId "com.avocarrot.demoapp.main"
         minSdkVersion 9
-        targetSdkVersion 21
-        versionCode 10
-        versionName "3.3.0"
+        targetSdkVersion 22
+        versionCode 11
+        versionName "3.3.1"
     }
 
     compileOptions {
@@ -26,6 +26,6 @@ android {
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile 'com.android.support:appcompat-v7:21.0.2'
-    compile 'com.google.android.gms:play-services:+'
+    compile 'com.android.support:appcompat-v7:22.0.0'
+    compile 'com.google.android.gms:play-services:7.0.0'
 }
