@@ -8,8 +8,8 @@ android {
         applicationId "com.avocarrot.demoapp.main"
         minSdkVersion 9
         targetSdkVersion 22
-        versionCode 12
-        versionName "3.3.2"
+        versionCode 13
+        versionName "3.4.0"
     }
 
     compileOptions {
