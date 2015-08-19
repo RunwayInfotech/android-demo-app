@@ -1,9 +1,6 @@
 package com.avocarrot.demoapp;
 
-import android.animation.ObjectAnimator;
-import android.animation.ValueAnimator;
 import android.annotation.TargetApi;
-import android.app.Activity;
 import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
@@ -143,28 +140,12 @@ public class ExampleGame extends Fragment {
 
     // Animate objects
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
-    public static void animateObjects(View cloudImage1, View cloudImage2, View monster, Context mContext) {
+    public void animateObjects(View cloudImage1, View cloudImage2, View ball, Context mContext) {
 
-        ObjectAnimator cloudAnim = ObjectAnimator.ofFloat(cloudImage1, "x", 690f);
-        cloudAnim.setDuration(3000);
-        cloudAnim.setRepeatCount(ValueAnimator.INFINITE);
-        cloudAnim.setRepeatMode(ValueAnimator.REVERSE);
-        cloudAnim.start();
+        cloudImage1.startAnimation(AnimationUtils.loadAnimation(mContext, R.anim.cloud_1));
+        cloudImage2.startAnimation(AnimationUtils.loadAnimation(mContext, R.anim.cloud_2));
 
-        ObjectAnimator cloudAnim2 = ObjectAnimator.ofFloat(cloudImage2, "x", 800f);
-        cloudAnim2.setDuration(8000);
-        cloudAnim2.setRepeatCount(ValueAnimator.INFINITE);
-        cloudAnim2.setRepeatMode(ValueAnimator.REVERSE);
-        cloudAnim2.start();
-
-        monster.setRotation(-20f);
-        ObjectAnimator ballAnimator = ObjectAnimator.ofFloat(monster, "rotation", 20f);
-        ballAnimator.setDuration(2000);
-        ballAnimator.setRepeatCount(ValueAnimator.INFINITE);
-        ballAnimator.setRepeatMode(ValueAnimator.REVERSE);
-        ballAnimator.start();
-
-        monster.startAnimation(AnimationUtils.loadAnimation(mContext, R.anim.game_monster_zoom_in));
+        ball.startAnimation(AnimationUtils.loadAnimation(mContext, R.anim.game_monster_zoom_in));
     }
 
     public static Fragment getInstance() {
