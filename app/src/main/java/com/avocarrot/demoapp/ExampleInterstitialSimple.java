@@ -34,7 +34,7 @@ public class ExampleInterstitialSimple extends Fragment {
         // --------------------------------------------------------
         // Avocarrot Integration: Interstitial
 
-        AvocarrotInterstitial interstitial = new AvocarrotInterstitial(getActivity(), "3dbab458941a2446e2b48ac866b42027f5cac288", "824db3658bdd2b565f8ffad3c75308ee5bc50f18");
+        AvocarrotInterstitial interstitial = new AvocarrotInterstitial(getActivity(), "3dbab458941a2446e2b48ac866b42027f5cac288", "c08dc248da9823e973073abce0540bc5b171c1e9");
         interstitial.setSandbox(true);
         interstitial.setLogger(true, "ALL");
 

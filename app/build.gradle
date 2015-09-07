@@ -8,8 +8,8 @@ android {
         applicationId "com.avocarrot.demoapp.main"
         minSdkVersion 9
         targetSdkVersion 22
-        versionCode 13
-        versionName "3.4.0"
+        versionCode 14
+        versionName "3.4.1"
     }
 
     compileOptions {
@@ -27,5 +27,6 @@ android {
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile 'com.android.support:appcompat-v7:22.1.1'
+    compile 'com.android.support:recyclerview-v7:23.0.0'
     compile 'com.google.android.gms:play-services-ads:7.5.0'
 }
