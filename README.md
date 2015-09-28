@@ -34,4 +34,4 @@ Documentation
 --------------------
 
 To find more information on how you can setup your Avocarrot Native Ads, go here:
-[Avocarrot Android Documentation](http://www.avocarrot.com/docs/#/android) 
+[Avocarrot Android Documentation](http://app.avocarrot.com/#/docs/getting-started/android) 
