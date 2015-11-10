@@ -7,3 +7,10 @@
   public <init> (android.content.Context, android.util.AttributeSet, int);
   public void set*(...);
 }
+
+-dontwarn android.support.v7.**
+-keep class android.support.v7.** { *; }
+-keep interface android.support.v7.** { *; }
+
+-keep public class com.google.android.gms.**
+-dontwarn com.google.android.gms.**
