@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="See example">
+        <menu>
+        <group android:checkableBehavior="single">
+
+            <item
+                android:id="@+id/nav_feed"
+                android:icon="@drawable/feed"
+                android:title="@string/option_feed" />
+            <item
+                android:id="@+id/nav_list"
+                android:icon="@drawable/list"
+                android:title="@string/option_list" />
+            <item
+                android:id="@+id/nav_tile"
+                android:icon="@drawable/tile"
+
+                android:title="@string/option_tile" />
+            <item
+                android:id="@+id/nav_games"
+                android:icon="@drawable/game"
+                android:title="@string/option_games" />
+            <item
+                android:id="@+id/nav_natural_pause"
+                android:icon="@drawable/natural_pause"
+                android:title="@string/option_natural_pause" />
+        </group>
+        </menu>
+    </item>
+    <item android:title="Links">
+        <menu>
+            <item
+                android:id="@+id/nav_unity"
+                android:icon="@drawable/unity"
+                android:title="Unity Demo App" />
+            <item
+                android:id="@+id/nav_adapters"
+                android:icon="@drawable/mopub_blue"
+                android:title="Mopub Adapter"
+                 />
+        </menu>
+    </item>
+
+</menu>

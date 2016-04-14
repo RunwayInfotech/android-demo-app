@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+style="?android:attr/actionButtonStyle"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+android:background="#e8e8e8"
+android:clickable="true"
+android:contentDescription="lol" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColor="@android:color/holo_red_dark"
+        android:text="Mopub Adapter">
+    </TextView>
+
+</RelativeLayout>

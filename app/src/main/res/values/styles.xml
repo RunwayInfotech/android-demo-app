@@ -1,0 +1,46 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/naturePauseButtonColor</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+    </style>
+
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="orangeButton">
+        <item name="android:background">@drawable/buttonselector</item>
+
+        <item name="android:textColor">@color/button_text_color_selector</item>
+        <item name="android:layout_width" >150dp</item>
+        <item name="android:layout_height" >55dp</item>
+        <item name="android:textSize" >18sp</item>
+    </style>
+
+    <style name="subStyle">
+        <item name="android:textColor" >@color/naturalPauseSectionTextColor</item>
+        <item name="android:textSize" >18sp</item>
+
+    </style>
+
+    <style name="MyCustomTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabTextAppearance">@style/MyCustomTabText</item>
+        <item name="tabSelectedTextColor">@color/colorAccent</item>
+
+    </style>
+
+    <style name="MyCustomTabText" parent="TextAppearance.AppCompat.Button">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/avoGray</item>
+    </style>
+</resources>
