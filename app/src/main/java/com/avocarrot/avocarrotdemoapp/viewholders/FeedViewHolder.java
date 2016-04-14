@@ -27,6 +27,9 @@ public class FeedViewHolder extends ItemViewHolder<DemoFeedItem> {
     @ViewId(R.id.personName)
     TextView personName;
 
+    @ViewId(R.id.date)
+    TextView date;
+
     @ViewId(R.id.feedDesrciption)
     TextView feedDesrciption;
 
@@ -45,6 +48,7 @@ public class FeedViewHolder extends ItemViewHolder<DemoFeedItem> {
         feedImage.setImageDrawable(Toolbox.loadDataFromAsset(item.getImage(), getContext()));
         avatarImage.setImageDrawable(Toolbox.loadDataFromAsset(item.getAvatar(), getContext()));
         personName.setText(item.getName());
+        date.setText(item.getDate());
     }
 
     @Override
