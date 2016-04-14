@@ -64,10 +64,9 @@ public class MainActivity extends AppCompatActivity
         adTypes=(TabLayout)findViewById(R.id.adTypes);
 
 
-
+        initCustomTabs();
         initCustomNavigationDrawerIcon(drawer,toggle);
         setupToolbar(null);
-        initCustomTabs();
         initEvents();
         replaceContainerFragment(-1);
     }
@@ -210,6 +209,7 @@ public class MainActivity extends AppCompatActivity
         fragmentManager.beginTransaction()
                 .replace(R.id.container, fragment)
                 .commit();
+
     }
 
     private void openUrlToBrowser(String url){
@@ -225,11 +225,23 @@ public class MainActivity extends AppCompatActivity
         boolean videoMode=tabPosition==0;
         AppUtils.AdType requestedMode=  videoMode? AppUtils.AdType.VIDEO_ADS: AppUtils.AdType.IMAGE_ADS;
 
-        boolean needsRecreate=!currentMode.equals(requestedMode);
+        boolean needsRecreate=!currentMode.equals(requestedMode) ;
         AppUtils.setCurrentAdType(requestedMode);
+
+        //Load feed if we change Adtype while on home screen
+        int fragmentToLoad;
+
+        if(lastFragmentId==-1){
+            fragmentToLoad=R.id.nav_feed;
+            setupToolbar(getString(R.string.option_feed));
+            navigationView.setCheckedItem(fragmentToLoad);
+        }else{
+            fragmentToLoad=lastFragmentId;
+        }
+
         if(needsRecreate){
             String toastInfoMsg=videoMode? "Switched to video ads":"Switched to display ads";
-            replaceContainerFragment(lastFragmentId);
+            replaceContainerFragment(fragmentToLoad);
             Toast.makeText(this,toastInfoMsg,Toast.LENGTH_SHORT).show();
         }
 

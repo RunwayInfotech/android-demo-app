@@ -40,8 +40,6 @@ public class GameExampleFragment extends Fragment {
     @Bind(R.id.cloud2)
     ImageView cloudImage2;
 
-    @Bind(R.id.game_screen)
-    RelativeLayout game_screen;
 
     @Bind(R.id.game_notification_board)
     RelativeLayout game_notification_board;
@@ -66,8 +64,6 @@ public class GameExampleFragment extends Fragment {
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_game_example, container, false);
         ButterKnife.bind(this, view);
-
-       // game_notification_board = (RelativeLayout) view.findViewById(R.id.game_notification_board);
 
         return view;
     }

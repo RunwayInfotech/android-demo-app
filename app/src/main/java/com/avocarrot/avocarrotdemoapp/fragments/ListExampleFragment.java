@@ -2,6 +2,7 @@ package com.avocarrot.avocarrotdemoapp.fragments;
 
 
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;

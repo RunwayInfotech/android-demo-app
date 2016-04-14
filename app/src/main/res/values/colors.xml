@@ -14,6 +14,5 @@
     <color name="naturePauseDisabledButtonColor">#d0d0d0</color>
     <color name="naturalPauseSectionTextColor">#6d6d6d</color>
     <color name="naturalPauseDividerColor">#dfdfdf</color>
-
-<color name="likeColor">#9ca8b0</color>
+    <color name="likeColor">#9ca8b0</color>
 </resources>

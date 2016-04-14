@@ -8,7 +8,7 @@ public class AppUtils {
         IMAGE_ADS,VIDEO_ADS
     }
 
-    private static AdType currentAdType=AdType.IMAGE_ADS;
+    private static AdType currentAdType=AdType.VIDEO_ADS;
 
     public static AdType getCurrentAdType() {
         return currentAdType;

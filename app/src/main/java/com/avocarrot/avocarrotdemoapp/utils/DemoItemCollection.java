@@ -42,8 +42,8 @@ public class DemoItemCollection {
     public static List<DemoFeedItem> getDemoFeedItems() {
         List<DemoFeedItem> items = new ArrayList<>();
 
-        items.add(new DemoFeedItem("feed_avatar_1.png","Penny Bell","24 Movies Your Probably Missed This Year, But Should Totally See", "item1.jpg"));
-        items.add(new DemoFeedItem("feed_avatar_2.png","Evan Jones","Tiger Populations are Up For The First Time In 100 Years","item2.jpg"));
+        items.add(new DemoFeedItem("feed_avatar_1.png","Penny Bell","24 Movies Your Probably Missed This Year, But Should Totally See", "feed_post_1.jpg"));
+        items.add(new DemoFeedItem("feed_avatar_2.png","Evan Jones","Tiger Populations are Up For The First Time In 100 Years", "feed_post_2.jpg"));
 
         return items;
     }
