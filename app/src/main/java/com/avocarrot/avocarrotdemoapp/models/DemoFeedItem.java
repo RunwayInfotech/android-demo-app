@@ -8,13 +8,14 @@ public class DemoFeedItem {
     private String name;
     private String description;
     private String image;
+    private String date;
 
-
-    public DemoFeedItem(String avatar, String name, String description, String image) {
+    public DemoFeedItem(String avatar, String name, String description, String image,String date) {
         this.avatar = avatar;
         this.name = name;
         this.description = description;
         this.image = image;
+        this.date=date;
     }
 
     public String getAvatar() {
@@ -47,5 +48,13 @@ public class DemoFeedItem {
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
     }
 }
