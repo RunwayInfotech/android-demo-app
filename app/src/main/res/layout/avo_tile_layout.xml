@@ -16,6 +16,7 @@
         android:layout_marginBottom="-4dp"
         >
 
+
         <com.avocarrot.androidsdk.ui.MatchWidthImageView
             android:id="@+id/avo_native_image"
             android:layout_width="match_parent"
@@ -64,6 +65,15 @@
         android:textColor="#bbbbbb"
         android:textSize="12dp"
         android:textStyle="italic" />
+
+    <com.avocarrot.androidsdk.ui.AdChoicesView
+        android:id="@+id/adChoices"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </com.avocarrot.androidsdk.ui.AdChoicesView>
 
     <TextView
 

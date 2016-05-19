@@ -142,16 +142,26 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
-                android:layout_alignParentBottom="true"
+                android:layout_above="@+id/adChoices"
                 android:gravity="right"
                 android:paddingLeft="5dp"
+                android:paddingBottom="5dp"
                 android:singleLine="true"
-                android:paddingBottom="20dp"
                 android:text="Sponsored"
                 android:textColor="#bbbbbb"
                 android:textSize="15sp"
                 android:textStyle="italic" />
 
+            <com.avocarrot.androidsdk.ui.AdChoicesView
+                android:id="@+id/adChoices"
+                android:paddingLeft="5dp"
+                android:paddingBottom="5dp"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </com.avocarrot.androidsdk.ui.AdChoicesView>
             <Button
                 android:id="@+id/avo_cta_button"
                 android:layout_width="120dp"
