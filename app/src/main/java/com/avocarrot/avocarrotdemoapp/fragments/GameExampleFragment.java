@@ -23,6 +23,8 @@ import java.util.List;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnTouch;
+
+import com.avocarrot.androidsdk.ui.AdChoicesView;
 import com.avocarrot.avocarrotdemoapp.R;
 import com.avocarrot.avocarrotdemoapp.utils.AppUtils;
 
@@ -113,6 +115,7 @@ public class GameExampleFragment extends Fragment {
                 Button adButton = (Button) game_notification_board.findViewById(R.id.avo_cta_button);
                 Button closeButton = (Button) game_notification_board.findViewById(R.id.avo_close_button);
                 ImageView adImage = (ImageView) game_notification_board.findViewById(R.id.avo_native_creative);
+                AdChoicesView adChoicesView = (AdChoicesView)game_notification_board.findViewById(R.id.adChoices);
                 adDescription.setText(ad.getDescription());
                 headline.setText(ad.getTitle());
 
@@ -126,7 +129,7 @@ public class GameExampleFragment extends Fragment {
                 adButton.setText(ad.getCTAText());
 
                 // Bind View
-                myCustomAd.bindView(ad, game_notification_board);
+                myCustomAd.bindView(ad, game_notification_board,adChoicesView);
 
                 // Show ad on click
                 game_notification_board.setOnClickListener(new View.OnClickListener() {

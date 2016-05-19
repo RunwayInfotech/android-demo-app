@@ -97,7 +97,8 @@ public class TileExampleFragment extends Fragment implements SwipeRefreshLayout.
                 -1,
                 R.id.avo_native_image,
                 R.id.avo_cta_button,
-                R.id.videoView
+                R.id.videoView,
+                R.id.adChoices
         );
         //Apply avocarrot adapter to recyclerview
         recyclerView.setAdapter(myTileAdapter);
